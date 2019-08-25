@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col">
+            <h1 id="project-name">
+                {{title}}
+            </h1>
+    </div>
+</div>
+<div class="row books-categories">
+    <div class="col">
+        <ul class="list-group">
+            <li class="list-group-item" 
+            style="cursor: pointer"
+            *ngFor="let category of categories; let i=index;"
+            (click)="onCategorySelected(i)">
+                <a >{{category | uppercase }}</a>
+                <span class="float-right">
+                    <i class="fas fa-arrow-right"></i>
+                </span>
+            </li>
+        </ul>
+    </div>
+</div>

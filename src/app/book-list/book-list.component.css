@@ -1,0 +1,93 @@
+.has-search .form-control {
+    padding-left: 2.375rem;
+    background: #6f49eb;
+    color: white;
+    border: 0px;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color:white;
+    background: #6f49eb;
+}
+
+
+.back-arrow{
+    color: white;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.cancel-button{
+    color: white;
+    cursor: pointer;
+}
+
+.book-list{
+    background: white;
+    padding: 10px;
+    height: 80vh;
+    overflow-y: scroll;
+}
+
+.book-list a{
+    color: black;
+}
+
+.book-details{
+    max-width: 80%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.img {
+    position: relative;
+    width:  12rem;
+    height: 18rem;
+    background-position: 0% 0%;
+    background-repeat:   no-repeat;
+    background-size:     cover;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+.navigator{
+    color:white;
+    background:hsl(254, 87%, 44%); 
+}
+
+.navigator-icon{
+    color: white;
+    vertical-align: middle;
+}
+
+.page-info{
+    color:white;
+    padding: 5px;
+}
+
+a :hover{
+    color:blue;
+    text-decoration: underline;
+}
+
+::placeholder {
+    color: white;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: white;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+   color: white;
+  }

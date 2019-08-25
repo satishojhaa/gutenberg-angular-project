@@ -1,0 +1,65 @@
+<div class="row">
+    <span class="back-arrow" (click)="goBack()">
+        <i class="fas fa-arrow-left back-arrow"></i>
+    </span>        
+    <div class="col">
+        <div class="form-group has-search">
+            <span class="fa fa-search form-control-feedback"></span>
+            <input [(ngModel)]="searchKey"
+            type="text" 
+            class="form-control" 
+            placeholder="Search"
+            (keyup)="onSearch()">
+        </div>
+    </div>
+    <span *ngIf="searchKey"
+     class="cancel-button"
+     (click)="searchKey=''; onSearch();">
+        Cancel
+    </span>
+</div>
+
+<hr>
+<app-alert *ngIf="errorMessage" [message]="errorMessage" (close)="errorMessage=''"></app-alert>
+<div class="book-list">
+    <div class="row">
+        <div *ngFor="let book of books;let i=index;" class="col-6 col-lg-4 col-xl-3 mb-3">
+            <a style="cursor: pointer;" (click)="onBookSelected(i)">
+                <div class="book">
+                    <div class="img" [ngStyle]="{'background-image':'url('+ book.formats['image/jpeg'] +')'}">
+                    </div>
+                    <div class="book-details">
+                        <span class="book-title">
+                            <b>{{book.title}}</b>
+                        </span>                        
+                        <br>
+                        <span class="book-author">
+                            {{book.authors.length > 0  ? book.authors[0].name : ''}}
+                        </span>
+                        
+                    </div>
+                </div>                   
+            </a>                 
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-4">
+        <button (click)="onPrevious()" class="btn navigator">
+            <span class="navigator-icon">
+                    <i class="fas fa-angle-left"></i>
+            </span> prev
+        </button>
+    </div>
+    <div class="col-4 page-info">
+        <span>Total Pages:{{pages}}</span>
+    </div>
+    <div class="col-4">
+        <button (click)="onNext()" class="btn float-right navigator">
+            next
+            <span class="navigator-icon">
+                    <i class="fas fa-angle-right"></i>
+            </span>
+        </button>
+    </div>
+</div>

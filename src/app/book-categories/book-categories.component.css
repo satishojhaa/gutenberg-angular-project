@@ -1,0 +1,14 @@
+h1#project-name{
+    color: white;
+    font-family: 'Oldenburg','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+li{
+    background:hsl(254, 87%, 44%);
+    color: white;
+    margin: 10px;
+}
+
+.books-categories{
+    height: 80vh;
+}
